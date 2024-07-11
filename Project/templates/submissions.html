@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submissions</title>
+</head>
+<body>
+    <header>
+        <h1>Submissions</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>All Submissions</h2>
+        <ul>
+            {% for submission in submissions %}
+                <li>{{ submission.name }} ({{ submission.email }}) - {{ submission.timestamp }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer>
+        <p>Contact us at: <a href="mailto:info@example.com">info@example.com</a></p>
+    </footer>
+</body>
+</html>
